@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-25T14:15:20Z",
+  "checked_at": "2026-11-25T23:36:23Z",
   "live": {
     "ok": true,
     "requested_url": "https://portwatch-vi.xyz/data/tracker.json",
     "status": 200,
     "final_url": "https://portwatch-vi.xyz/data/tracker.json",
     "content_type": "application/json",
-    "bytes": 262342,
-    "sha256": "29879791f7e68d4c3e30caf3e795bfd17431d7fd205a1b786f9d06f1081fd54c",
-    "updated": "2026-11-25T13:45:26.000Z",
+    "bytes": 286232,
+    "sha256": "277c3f8addeb2ca29ac218f0f711a1151915b80a80a8272dc4f105552bebb127",
+    "updated": "2026-11-25T22:09:30.708Z",
     "error": null,
-    "checked_at": "2026-11-25T14:15:20Z"
+    "checked_at": "2026-11-25T23:36:23Z"
   },
   "github_source": {
     "ok": true,
@@ -19,11 +19,11 @@
     "status": 200,
     "final_url": "https://raw.githubusercontent.com/4lwayz/portwatch-vi/main/data/tracker.json",
     "content_type": "text/plain; charset=utf-8",
-    "bytes": 262342,
-    "sha256": "29879791f7e68d4c3e30caf3e795bfd17431d7fd205a1b786f9d06f1081fd54c",
-    "updated": "2026-11-25T13:45:26.000Z",
+    "bytes": 286232,
+    "sha256": "277c3f8addeb2ca29ac218f0f711a1151915b80a80a8272dc4f105552bebb127",
+    "updated": "2026-11-25T22:09:30.708Z",
     "error": null,
-    "checked_at": "2026-11-25T14:15:20Z"
+    "checked_at": "2026-11-25T23:36:23Z"
   },
   "byte_identical": true,
   "matches_current_source": true,
@@ -31,6 +31,6 @@
   "github_source_matches": [],
   "runner": {
     "kind": "github_actions",
-    "run_url": "https://github.com/tudorek12345/portwatch-registry-probe/actions/runs/45632032502"
+    "run_url": "https://github.com/tudorek12345/portwatch-registry-probe/actions/runs/45722648540"
   }
 }
