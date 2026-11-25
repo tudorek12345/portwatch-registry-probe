@@ -1,0 +1,40 @@
+name: Verify PortWatch live registry
+on:
+  schedule:
+    - cron: '15 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/probe.yml'
+      - 'probe.py'
+      - 'test_probe.py'
+permissions:
+  contents: write
+concurrency:
+  group: portwatch-registry-probe
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Test probe
+        run: python3 -m unittest -v test_probe
+      - name: Fetch live and source registries
+        run: python3 probe.py
+      - name: Publish evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add evidence/latest.json
+          if git diff --cached --quiet; then
+            echo 'No evidence change'
+          else
+            git commit -m 'Record PortWatch registry verification'
+            git pull --rebase origin main
+            git push origin main
+          fi
